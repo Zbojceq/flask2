@@ -43,11 +43,11 @@ def index2():
 def tablica_tadeusz():
     return render_template('index2.html', title='Witaj w Flask!')
 
-@app.route('/chapter')
-def chapter():
-    chapter_number = request.args.get('number', type=int)
-    chapter_text = chapters.get(chapter_number)
-    return render_template('base.html', chapter_text=chapter_text)
+@app.route('/chapter/<number>')
+def chapter(number):
+    #chapter_number = request.args.get('number', type=int)
+    #chapter_text = chapters.get(chapter_number)
+    return render_template('base.html', number=number)
 
 @app.route('/greeting/<time_of_day>')
 def greeting(time_of_day):

@@ -12,50 +12,76 @@
             <div class="col align-self-start" style="background-color: #cacacc;">
                 <ul class="nav flex-column">
                     <li class="nav-item">
-                        <a class="nav-link" href="/chapter?number=1">Rozdział 1</a>
+                        <a class="nav-link" href="/chapter/1">Rozdział 1</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/chapter?number=2">Rozdział 2</a>
+                        <a class="nav-link" href="/chapter/2">Rozdział 2</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/chapter?number=3">Rozdział 3</a>
+                        <a class="nav-link" href="/chapter/3">Rozdział 3</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/chapter?number=4">Rozdział 4</a>
+                        <a class="nav-link" href="/chapter/4">Rozdział 4</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/chapter?number=5">Rozdział 5</a>
+                        <a class="nav-link" href="/chapter/5">Rozdział 5</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/chapter?number=6">Rozdział 6</a>
+                        <a class="nav-link" href="/chapter/6">Rozdział 6</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/chapter?number=7">Rozdział 7</a>
+                        <a class="nav-link" href="/chapter/7">Rozdział 7</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/chapter?number=8">Rozdział 8</a>
+                        <a class="nav-link" href="/chapter/8">Rozdział 8</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/chapter?number=9">Rozdział 9</a>
+                        <a class="nav-link" href="/chapter/9">Rozdział 9</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/chapter?number=10">Rozdział 10</a>
+                        <a class="nav-link" href="/chapter/10">Rozdział 10</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/chapter?number=11">Rozdział 11</a>
+                        <a class="nav-link" href="/chapter/11">Rozdział 11</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="/chapter?number=12">Rozdział 12</a>
+                        <a class="nav-link" href="/chapter/12">Rozdział 12</a>
                     </li>
                 </ul>
             </div>
             <div class="col align-self-start" style="background-color: #c1e0f1;">
-                    {% block content %}
-                        <p>{{ chapter_text }}</p>
-                    {% endblock %}
+                {% block content %}
+                    {% if number == '1' %}
+                        <p>Tekst 1 Rozdziału</p>
+                    {% elif number == '2' %}
+                        <p>Tekst 2 Rozdziału</p>
+                    {% elif number == '3' %}
+                        <p>Tekst 3 Rozdziału</p>
+                    {% elif number == '4' %}
+                        <p>Tekst 4 Rozdziału</p>
+                    {% elif number == '5' %}
+                        <p>Tekst 5 Rozdziału</p>
+                    {% elif number == '6' %}
+                        <p>Tekst 6 Rozdziału</p>
+                    {% elif number == '7' %}
+                        <p>Tekst 7 Rozdziału</p>
+                    {% elif number == '8' %}
+                        <p>Tekst 8 Rozdziału</p>
+                    {% elif number == '9' %}
+                        <p>Tekst 9 Rozdziału</p>
+                    {% elif number == '10' %}
+                        <p>Tekst 10 Rozdziału</p>
+                    {% elif number == '11' %}
+                        <p>Tekst 11 Rozdziału</p>
+                    {% elif number == '12' %}
+                        <p>Tekst 12 Rozdziału</p>
+                    {% else %}
+                        <p>Brak Wybranego Rozdziału</p>
+                    {% endif %}
+                {% endblock %}
             </div>
             <div class="col align-self-start" style="background-color: #cacacc;">
-                
+                {% block dzien %}{% endblock %}
             </div>
         </div>
     </div>
