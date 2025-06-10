@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Dzień dobry!</h1>
+    {% if time_of_day == 'morning' %}
+        <p>Miłego poranka!</p>
+    {% elif time_of_day == 'afternoon' %}
+        <p>Miłego popołudnia!</p>
+    {% else %}
+        <p>Miłego wieczoru!</p>
+    {% endif %}
+{% endblock %}
